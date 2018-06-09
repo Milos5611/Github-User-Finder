@@ -1,0 +1,48 @@
+html * {
+    outline: 0 !important;
+}
+
+html {
+    background-image: linear-gradient(151deg, #02bcf2, #012f74);
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $defaultFont;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+// Fix autocomplete color
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active,
+input:-webkit-autofill:focus {
+    background-color: $white !important;
+    color: #555 !important;
+    -webkit-box-shadow: 0 0 0 1000px $white inset !important;
+    -webkit-text-fill-color: #555555 !important;
+}
+
+//links
+a {
+    color: #949ea8;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Paragraph
+p {
+    font-size: 16px;
+    line-height: 1.33;
+}

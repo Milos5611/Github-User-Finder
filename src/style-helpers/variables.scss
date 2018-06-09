@@ -1,0 +1,23 @@
+// This file contains helpers- base css variables which will be used in other scss files
+
+// colors
+$white: #fff !default;
+
+$black: #000;
+
+$black-opaque: rgba(0, 0, 0, 0.9);
+
+$grey-100: rgba(112, 111, 111, 1);
+$grey-200: rgba(216, 216, 216, 1);
+$grey-300: rgba(220, 220, 220, 1);
+$grey-400: rgba(240, 240, 240, 1);
+$grey-500: rgba(247, 247, 247, 1);
+
+$cyan: rgba(33, 160, 210, 1);
+$cyan-opaque: rgba(33, 160, 210, 0.9);
+$cyan-hover: rgba(119, 195, 225, 1);
+
+$signal-orange: rgba(243, 149, 0, 1);
+
+//fonts
+$defaultFont: "Interstate-Light", Helvetica, Arial, sans-serif;

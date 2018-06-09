@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Interstate';
+    src: url('Interstate-Black.eot');
+    src: url('Interstate-Black.eot?#iefix') format('embedded-opentype'),
+        url('Interstate-Black.woff2') format('woff2'),
+        url('Interstate-Black.woff') format('woff'),
+        url('Interstate-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Interstate';
+    src: url('Interstate-Bold.eot');
+    src: url('Interstate-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Interstate-Bold.woff2') format('woff2'),
+        url('Interstate-Bold.woff') format('woff'),
+        url('Interstate-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Interstate';
+    src: url('Interstate-Light.eot');
+    src: url('Interstate-Light.eot?#iefix') format('embedded-opentype'),
+        url('Interstate-Light.woff2') format('woff2'),
+        url('Interstate-Light.woff') format('woff'),
+        url('Interstate-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
