@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "repository": {
-        "type": "git",
+        "type": "gitlab",
         "url": "https://gitlab.com/milos5611/advanon-fe-task.git"
     },
     "author": "Milos Nikolic",

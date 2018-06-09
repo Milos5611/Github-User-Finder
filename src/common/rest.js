@@ -22,7 +22,7 @@ class Rest {
             [ METHOD_KEY ]: GET,
             [ CROSS_ORIGIN_KEY ]: process.env.NODE_ENV !== "production",
             [ HEADERS_KEY ]: {
-                [ AUTHORIZATION_KEY ]: `Basic ${window.com.incode.TOKEN}`,
+                [ AUTHORIZATION_KEY ]: `Basic ${window.com.advanon.TOKEN}`,
                 [ ACCEPT_KEY ]: APPLICATION_JSON,
                 [ CONTENT_TYPE_KEY ]: APPLICATION_JSON,
             }
@@ -37,7 +37,7 @@ class Rest {
             [ METHOD_KEY ]: POST,
             [ CROSS_ORIGIN_KEY ]: process.env.NODE_ENV !== "production",
             [ HEADERS_KEY ]: {
-                [ AUTHORIZATION_KEY ]: `Basic ${window.com.incode.TOKEN}`,
+                [ AUTHORIZATION_KEY ]: `Basic ${window.com.advanon.TOKEN}`,
                 [ ACCEPT_KEY ]: APPLICATION_JSON,
                 [ CONTENT_TYPE_KEY ]: APPLICATION_JSON
             },

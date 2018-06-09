@@ -19,7 +19,7 @@ module.exports = merge(commonConfig, {
     devtool: "source-map",
     plugins: [
         new webpack.DefinePlugin({
-            "window.com.incode": {
+            "window.com.advanon": {
                 NODE_ENV: JSON.stringify("production"),
                 BASE_URL: JSON.stringify("/rest"),
                 TOKEN: JSON.stringify()

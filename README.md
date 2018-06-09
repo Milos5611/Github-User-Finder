@@ -1,6 +1,6 @@
 # Project Title
 
-ms-incodesmile-web
+advanon-fe-task
 
 ## Getting Started
 
@@ -61,17 +61,17 @@ Open your browser and find app loaded on localhost:8080 -port
 * [React](https://facebook.github.io/react/) - The javascript library
 * [Redux](http://redux.js.org/) - Predictable state container for JavaScript apps
 * [React Router](https://github.com/ReactTraining/react-router) - Declarative routing for React
-* [Material-UI](http://www.material-ui.com/) - React Components that Implement Google's Material Design
+* [React-Bootstrap](https://react-bootstrap.github.io/) - React Components that Bootstrap Design
 
 ## Versioning
 
-We use [GitHub](https://github.com/IncodeTechnologies/ms-incodesmile-web.git) for versioning. 
+I use [GitLab](https://gitlab.com/milos5611/advanon-fe-task.git) for versioning. 
 
 ## Author
 
-* **Incode** - [GitHub](https://github.com/IncodeTechnologies)
+* **Milos Nikolic** - [GitHub](https://github.com/Milos5611) - [LinkedIn](https://www.linkedin.com/in/nikolicmilos/)
 
 
 ## License
 
-I N C O D E
+A D V A N O N

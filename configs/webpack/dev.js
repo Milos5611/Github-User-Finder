@@ -19,7 +19,7 @@ module.exports = merge(commonConfig, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NamedModulesPlugin(),
         new webpack.DefinePlugin({
-            "window.com.incode": {
+            "window.com.advanon": {
                 NODE_ENV: JSON.stringify("development"),
                 BASE_URL: JSON.stringify("/rest"),
                 TOKEN: JSON.stringify()
