@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const commonConfig = require("./common");
 
 module.exports = merge(commonConfig, {
-    mode: 'development',
+    mode: "development",
     entry: [
         "babel-polyfill",
         "react-hot-loader/patch",
@@ -22,7 +22,7 @@ module.exports = merge(commonConfig, {
             "window.com.advanon": {
                 NODE_ENV: JSON.stringify("development"),
                 BASE_URL: JSON.stringify("/rest"),
-                TOKEN: JSON.stringify()
+                GITHUB_API: JSON.stringify("https://api.github.com")
             }
         })
     ]

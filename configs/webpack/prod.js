@@ -6,7 +6,7 @@ const webpack = require("webpack");
 const commonConfig = require("./common");
 
 module.exports = merge(commonConfig, {
-    mode: 'production',
+    mode: "production",
     entry: [
         "babel-polyfill",
         "./index.js"
@@ -22,7 +22,7 @@ module.exports = merge(commonConfig, {
             "window.com.advanon": {
                 NODE_ENV: JSON.stringify("production"),
                 BASE_URL: JSON.stringify("/rest"),
-                TOKEN: JSON.stringify()
+                GITHUB_API: JSON.stringify("https://api.github.com")
             }
         })
     ]

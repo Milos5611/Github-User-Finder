@@ -1,4 +1,4 @@
-import LoadingSpinner from "../component/widget/loadingSpinner/LoadingSpinner";
+import LoadingSpinner from "../component/widget/LoadingSpinner/LoadingSpinner";
 import {OPEN} from "../services/loadingSpinner";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";

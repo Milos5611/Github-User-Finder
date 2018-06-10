@@ -1,16 +1,18 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import { applyMiddleware, combineReducers, createStore } from "redux";
 import loadingSpinner from "../services/loadingSpinner";
+import users from "../services/users";
 import thunk from "redux-thunk";
 
 const reducers = {
-    loadingSpinner
+    loadingSpinner,
+    users
 };
 
 const logger = store => next => action => {
 
     let result = next(action);
 
-    if (process.env.NODE_ENV !== "production") {
+    if ( process.env.NODE_ENV !== "production" ) {
         /* eslint-disable */
         console.group(action.type);
         console.info("Dispatching:", action);

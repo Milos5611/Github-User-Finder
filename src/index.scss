@@ -5,4 +5,6 @@
 @import "style-helpers/mixins";
 @import "style-helpers/typografy";
 // LoadingSpinner
-@import "component/widget/loadingSpinner/index";
+@import "component/view/homePage/index";
+@import "component/widget/LoadingSpinner/index";
+@import "component/widget/GitHubUser/index";
