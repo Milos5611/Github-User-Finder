@@ -20,7 +20,7 @@
         "webpack"
     ],
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "0.18.0",
         "babel-cli": "6.26.0",
         "babel-core": "6.26.3",
         "babel-preset-env": "1.7.0",
@@ -28,7 +28,7 @@
         "babel-preset-stage-2": "6.24.1",
         "express": "4.16.3",
         "lodash": "4.17.10",
-        "parse-link-header": "^1.0.1",
+        "parse-link-header": "1.0.1",
         "path": "0.12.7",
         "prop-types": "15.6.1",
         "react": "16.4.0",
@@ -49,22 +49,29 @@
     },
     "devDependencies": {
         "babel-eslint": "8.2.3",
+        "babel-jest": "23.0.1",
         "babel-loader": "7.1.4",
         "babel-polyfill": "6.26.0",
         "classnames": "2.2.5",
         "css-loader": "0.28.11",
+        "enzyme": "3.3.0",
+        "enzyme-adapter-react-16": "1.1.1",
         "eslint": "4.19.1",
         "eslint-loader": "2.0.0",
         "eslint-plugin-react": "7.8.2",
+        "expect": "23.1.0",
         "extract-text-webpack-plugin": "4.0.0-beta.0",
         "file-loader": "1.1.11",
         "html-webpack-plugin": "3.2.0",
         "image-webpack-loader": "4.3.0",
+        "jest": "23.1.0",
         "json-loader": "0.5.7",
         "node-sass": "4.9.0",
         "postcss-import": "11.1.0",
         "postcss-loader": "2.1.5",
         "postcss-preset-env": "5.1.0",
+        "react-addons-test-utils": "15.6.2",
+        "react-test-renderer": "16.4.0",
         "resolve-url-loader": "2.3.0",
         "sass-loader": "7.0.1",
         "style-loader": "0.21.0"
@@ -73,6 +80,7 @@
         "dev": "webpack-dev-server --config configs/webpack/dev --progress",
         "build": "webpack --config=configs/webpack/prod.js",
         "start": "npm run dev",
-        "eslint": "eslint -c .eslintrc.js -f junit src -o ./eslint.xml --no-color; exit 0"
+        "eslint": "eslint -c .eslintrc.js -f junit src -o ./eslint.xml --no-color; exit 0",
+        "test": "jest"
     }
 }

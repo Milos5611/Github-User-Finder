@@ -27,7 +27,7 @@ class Home extends Component {
 
     componentDidMount() {
         const { fetchAllUsers, users } = this.props;
-        if(isNull(users)) {
+        if ( isNull(users) ) {
             fetchAllUsers();
         }
     }
@@ -90,7 +90,6 @@ class Home extends Component {
             </Grid>
         );
     }
-
 }
 
 export default Home;
