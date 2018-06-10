@@ -9177,7 +9177,7 @@ tough-cookie@~2.3.0:
   dependencies:
     punycode "^1.4.1"
 
-transfer-webpack-plugin@0.1.4:
+transfer-webpack-plugin@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/transfer-webpack-plugin/-/transfer-webpack-plugin-0.1.4.tgz#6b5adedc58cbaa89ddcb9eb4e90e36f67655ed76"
   dependencies:

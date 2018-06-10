@@ -1,2 +1,2 @@
 export const HOME = "/";
-export const USER = "/users";
+export const USER = "/details/:id";

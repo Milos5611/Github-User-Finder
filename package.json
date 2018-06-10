@@ -40,7 +40,6 @@
         "redux": "4.0.0",
         "redux-thunk": "2.3.0",
         "reqwest": "2.0.5",
-        "transfer-webpack-plugin": "0.1.4",
         "uglifyjs-webpack-plugin": "1.2.5",
         "webpack": "4.10.2",
         "webpack-command": "0.2.0",
@@ -51,7 +50,6 @@
     "devDependencies": {
         "babel-eslint": "8.2.3",
         "babel-loader": "7.1.4",
-        "babel-plugin-transform-function-bind": "6.22.0",
         "babel-polyfill": "6.26.0",
         "classnames": "2.2.5",
         "css-loader": "0.28.11",

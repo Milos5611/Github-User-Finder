@@ -3,14 +3,15 @@ import history from "../common/history";
 import rest from "../common/rest";
 import { beginLoading, endLoading } from "./loadingSpinner";
 import parseLink from "parse-link-header";
-import isEmpty from "lodash/isEmpty";
 
 const DATA_LOADED = "DATA_LOADED";
 const USER_DETAIL_LOADED = "USER_DETAIL_LOADED";
+const PAGE_CHANGED = "PAGE_CHANGED";
 
 export const NEXT = "next_link";
 export const USERS = "users";
 export const USER_DETAIL = "userDetail";
+export const PAGE = "page";
 
 export const initialState = {
     [ USERS ]: null,
@@ -35,6 +36,12 @@ export default function reducer( state = initialState, action ) {
                 [ USER_DETAIL ]: action[ USER_DETAIL ]
             };
             break;
+        case PAGE_CHANGED:
+            newState = {
+                ...state,
+                [ PAGE ]: action[ PAGE ]
+            };
+            break;
         default:
             newState = {
                 ...state
@@ -53,7 +60,11 @@ export function fetchAllUsers() {
         try {
             const search_value = await rest.doGet(`${window.com.advanon.GITHUB_API}/users?since=${next.since}`);
             const links = parseLink(search_value.headers.link);
-            dispatch(dataLoadedSuccessful({ ...search_value.data, users }, links.next));
+            if ( users ) {
+                dispatch(dataLoadedSuccessful([ ...users, ...search_value.data ], links.next));
+            } else {
+                dispatch(dataLoadedSuccessful(search_value.data, links.next));
+            }
             dispatch(endLoading());
         } catch ( error ) {
             dispatch(endLoading());
@@ -63,14 +74,13 @@ export function fetchAllUsers() {
 }
 
 // async func, return detail about chosen user
-export function userDetail( id ) {
+export function fetchUserDetail( id ) {
     return async ( dispatch ) => {
         dispatch(beginLoading());
         try {
             const search_value = await rest.doGet(`${window.com.advanon.GITHUB_API}/users/${id}`);
-            dispatch(userDetailDataLoadedSuccessful(search_value));
+            dispatch(userDetailDataLoadedSuccessful(search_value.data));
             dispatch(endLoading());
-            history.push(`/users/${id}`);
         } catch ( error ) {
             dispatch(endLoading());
             throw new Error(error);
@@ -80,16 +90,25 @@ export function userDetail( id ) {
 
 // async func, return filtered result list
 export function findUserFromQuery( query ) {
-    return async ( dispatch ) => {
+    return async ( dispatch, getState ) => {
         dispatch(beginLoading());
+        const next = getState().users[ NEXT ];
         try {
             const search_value = await rest.doGet(`${window.com.advanon.GITHUB_API}/search/users?q=${query}`);
-            dispatch(dataLoadedSuccessful(search_value.items));
+            dispatch(dataLoadedSuccessful(search_value.data.items, next));
             dispatch(endLoading());
         } catch ( error ) {
             dispatch(endLoading());
             throw new Error(error);
         }
+    };
+}
+
+export function goToPage( page, id ) {
+    history.push(`/${page}/${id}`);
+    return {
+        [ TYPE_KEY ]: PAGE_CHANGED,
+        [ PAGE ]: page
     };
 }
 

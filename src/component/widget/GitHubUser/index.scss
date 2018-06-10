@@ -1,5 +1,57 @@
-.img-circle {
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+.github-user {
+    &.card,
+    &.details {
+        margin: 10px -10px;
+        padding: 15px;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .3);
+        transition: none 0.2s ease;
+        transition-property: transform;
+        will-change: box-shadow;
+
+        &:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+            transform: translateY(-4px);
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            right: 0;
+            top: 0;
+            background: #2098D1;
+            height: 4px;
+        }
+
+        .img-circle {
+            width: 50px;
+            height: 50px;
+        }
+
+        .github-user--username {
+            font-weight: bold;
+        }
+
+        .github-user--details {
+            background-color: #ffffff;
+            border-radius: 5px;
+            color: #034c7c;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .user-detail--template {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
 }

@@ -8,6 +8,7 @@ import customHistory from "./common/history";
 import store from "./common/store";
 import LoadingSpinner from "./container/LoadingSpinner";
 import HomePage from "./container/HomePage";
+import UserDetail from "./container/UserDetail";
 
 const App = () => {
     return (
@@ -23,6 +24,7 @@ const App = () => {
                         />
                         <Route
                             exact
+                            component={UserDetail}
                             path={ROUTES.USER}
                         />
                     </Switch>
@@ -33,4 +35,4 @@ const App = () => {
 };
 
 const rootEl = document.getElementById("root");
-render(<App/>,rootEl);
+render(<App/>, rootEl);

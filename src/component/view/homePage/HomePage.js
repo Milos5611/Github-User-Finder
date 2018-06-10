@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import debounce from "lodash/debounce";
+import isNull from "lodash/isNull";
 import { FormGroup, FormControl, Grid, Row, Col } from "react-bootstrap";
 import User from "../../widget/GitHubUser/User";
 
@@ -9,7 +10,7 @@ class Home extends Component {
     static propTypes = {
         fetchAllUsers: PropTypes.func.isRequired,
         findUserFromQuery: PropTypes.func.isRequired,
-        userDetail: PropTypes.func.isRequired,
+        goToPage: PropTypes.func.isRequired,
         users: PropTypes.array
     };
 
@@ -25,8 +26,10 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        const { fetchAllUsers } = this.props;
-        fetchAllUsers();
+        const { fetchAllUsers, users } = this.props;
+        if(isNull(users)) {
+            fetchAllUsers();
+        }
     }
 
     handleQuery = ( query ) => {
@@ -38,22 +41,22 @@ class Home extends Component {
         });
     };
 
-    handleSomething = () => {
+    handleLoadMoreUsers = () => {
+        const { fetchAllUsers } = this.props;
         if ( (window.innerHeight + window.scrollY) >= document.body.offsetHeight ) {
-            const { fetchAllUsers } = this.props;
             fetchAllUsers();
         }
     };
 
     render() {
-        const { users, userDetail } = this.props;
+        const { users, goToPage } = this.props;
         return (
             <Grid>
-                <div className="office"/>
+                <div className="github-logo"/>
                 <Row className="show-grid">
                     <section
                         className="user-list--wrapper"
-                        onWheel={() => this.handleSomething()}
+                        onWheel={this.handleLoadMoreUsers}
                     >
                         <FormGroup bsSize="large">
                             <FormControl
@@ -77,7 +80,7 @@ class Home extends Component {
                                         className="card"
                                         avatar={user.avatar_url}
                                         login={user.login}
-                                        getUserDetail={() => userDetail(user.id)}
+                                        changePage={() => goToPage("details", user.login)}
                                     />
                                 </Col>
                             );
