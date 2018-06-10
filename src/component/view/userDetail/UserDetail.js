@@ -11,10 +11,6 @@ class UserDetail extends Component {
         userDetail: PropTypes.object
     };
 
-    constructor( props ) {
-        super(props);
-    }
-
     componentDidMount() {
         const { fetchUserDetail, match } = this.props;
         fetchUserDetail(match.params.id);
