@@ -48,7 +48,7 @@ Or
 npm install
 ```
 
-## Deployment
+### Run dev-server
 
 To start application type
 
@@ -60,14 +60,14 @@ or
 npm run start
 ```
 
-To build production version type 
+### To build project and test it
 
 ```
-yarn build
+yarn build && node server.js
 ```
 or
 ```
-npm run start
+npm run build && node server.js
 ```
 
 ## Starting
