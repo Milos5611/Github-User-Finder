@@ -17,9 +17,9 @@ users.
 
 ## Extra added
 
-1) Search GitHub users with debounce function that wait for 1s second user not type and then fire request
-2) Loading Spinner component
-3) Loading more users when user scroll to bottom of the page
+1. Search GitHub users with debounce function that wait for 1s second user not type and then fire request
+2. Loading Spinner component
+3. Loading more users when user scroll to bottom of the page
 
 ## Getting Started
 
